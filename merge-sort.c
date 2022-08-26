@@ -7,11 +7,11 @@ void printList(int *l, int size) {
   }
 }
 int *merge(int *a, int *b, int a_size, int b_size) {
-  a_size++;
-  b_size++;
   int a_pointer = 0;
   int b_pointer = 0;
   int *out = (int*)malloc((a_size + b_size) * sizeof(int));
+  a_size++;
+  b_size++;
   int out_pointer = 0;
   while (a_pointer != a_size - 1 || b_pointer != b_size - 1) {
     int a_element = *(a + a_pointer);
